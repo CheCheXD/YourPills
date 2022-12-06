@@ -10,33 +10,39 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/ok"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="Os seus comprimidos"
         android:textColor="@color/black"
         android:textSize="25sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ok"
+        app:srcCompat="@drawable/your_pills" />
 
     <EditText
         android:id="@+id/conta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/username"
+        android:layout_below="@id/imageView"
         android:layout_marginBottom="50dp"
         android:hint="Email/telemovel"
-        android:autofillHints=""
-        />
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/password"
+        android:layout_below="@+id/conta"
         android:layout_marginBottom="50dp"
         android:hint="Palavra passe"
-        />
+        android:minHeight="48dp" />
 
     <Button
         android:id="@+id/btnlogin"
