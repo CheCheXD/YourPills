@@ -29,7 +29,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/calendario"
         android:layout_width="150dp"
         android:layout_height="80dp"
         android:text="Calendario"
@@ -38,7 +38,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/comprimido"
         android:layout_width="128dp"
         android:layout_height="80dp"
         android:text="Comprimidos"
@@ -47,7 +47,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/receita"
         android:layout_width="128dp"
         android:layout_height="80dp"
         android:text="Receitas"
