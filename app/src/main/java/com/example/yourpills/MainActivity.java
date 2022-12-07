@@ -11,9 +11,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText conta, password;
-    Button singin, singup;
-    DB DB;
+    private EditText conta, password;
+    private Button singin, singup;
+    private DB DB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="18dp"
-    tools:context=".RoutineActivity">
+    tools:context=".RotinaActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -24,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nome do Comprimido"
+        android:minHeight="48dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="68dp" />
@@ -34,6 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/nome_comprimido"
         android:hint="Descrisão"
+        android:minHeight="48dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="130dp" />
@@ -46,6 +48,17 @@
         android:text="criar rotina"
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="525dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/voltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="voltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="572dp"
+        android:layout_below="@id/rotina1"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
