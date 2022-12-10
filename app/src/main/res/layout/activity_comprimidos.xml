@@ -6,4 +6,61 @@
     android:layout_height="match_parent"
     tools:context=".ComprimidosActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Os seus Comprimidos"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:layout_width="409dp"
+        android:layout_height="12dp"
+        android:background="#512DA8"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="50dp"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="560dp"
+        android:background="#E91E63"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="175dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/calendario3"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:text="Calendario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/comprimido3"
+        android:layout_width="128dp"
+        android:layout_height="80dp"
+        android:text="Comprimidos"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/receita3"
+        android:layout_width="128dp"
+        android:layout_height="80dp"
+        android:text="Receitas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

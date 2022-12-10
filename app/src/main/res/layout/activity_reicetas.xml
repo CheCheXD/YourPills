@@ -6,4 +6,53 @@
     android:layout_height="match_parent"
     tools:context=".ReicetasActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="As Suas Receitas"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <View
+        android:layout_width="320dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="46dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="50dp" />
+
+    <Button
+        android:id="@+id/calendario2"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:text="Calendario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/comprimido2"
+        android:layout_width="128dp"
+        android:layout_height="80dp"
+        android:text="Comprimidos"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/receita2"
+        android:layout_width="128dp"
+        android:layout_height="80dp"
+        android:text="Receitas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

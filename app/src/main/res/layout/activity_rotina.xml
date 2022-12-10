@@ -7,17 +7,25 @@
     android:padding="18dp"
     tools:context=".RotinaActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="Faça aqui a sua rotina "
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="16dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Faça aqui a sua rotina "
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+    <View
+        android:layout_width="320dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="51dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/nome_comprimido"
