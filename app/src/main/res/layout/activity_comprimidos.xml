@@ -18,24 +18,17 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="16dp" />
 
-    <TextView
-        android:layout_width="409dp"
-        android:layout_height="12dp"
-        android:background="#512DA8"
-        android:gravity="center_horizontal"
-        android:text=""
-        android:textSize="25sp"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="50dp"
-        tools:ignore="MissingConstraints" />
-
     <View
-        android:layout_width="2dp"
-        android:layout_height="560dp"
-        android:background="#E91E63"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="175dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_width="320dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="46dp"
+        android:background="@color/black"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="50dp" />
 
     <Button
         android:id="@+id/calendario3"
@@ -45,6 +38,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/receitas"
+        android:layout_width="48dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="4dp"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="525dp" />
 
     <Button
         android:id="@+id/comprimido3"
