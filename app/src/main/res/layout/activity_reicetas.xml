@@ -40,30 +40,23 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="525dp" />
 
-    <Button
-        android:id="@+id/calendario2"
-        android:layout_width="150dp"
-        android:layout_height="80dp"
-        android:text="Calendario"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constrainedBottom_toTopOf="@+id/BottomNavigationView"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="526dp"
+        tools:ignore="MissingConstraints">
 
-    <Button
-        android:id="@+id/comprimido2"
-        android:layout_width="128dp"
-        android:layout_height="80dp"
-        android:text="Comprimidos"
-        android:textSize="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+    </FrameLayout>
 
-    <Button
-        android:id="@+id/receita2"
-        android:layout_width="128dp"
-        android:layout_height="80dp"
-        android:text="Receitas"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/BottomNavigationView"
+        android:layout_width="416dp"
+        android:layout_height="61dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="670dp"
+        app:menu="@menu/bottom_nav_menu"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

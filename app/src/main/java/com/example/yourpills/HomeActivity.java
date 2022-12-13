@@ -1,10 +1,15 @@
 package com.example.yourpills;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
@@ -14,7 +19,37 @@ public class HomeActivity extends AppCompatActivity {
     private CalendarView calendarView;
     private String selectedDate;
     private SQLiteDatabase sqLiteDatabase;
-    private Button calendario, comprimido, receita, rotina;
+    private Button rotina, login1;
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.bottom_nav_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.item2:
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(intent);
+        }
+
+        switch (item.getItemId()){
+            case R.id.item3:
+                Intent intent = new Intent(getApplicationContext(), ComprimidosActivity.class);
+                startActivity(intent);
+        }
+
+        switch (item.getItemId()){
+            case R.id.item4:
+                Intent intent = new Intent(getApplicationContext(), ReicetasActivity.class);
+                startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,32 +57,15 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         calendarView = findViewById(R.id.calendarView);
-        calendario = (Button) findViewById(R.id.calendario);
-        comprimido = (Button) findViewById(R.id.comprimido);
-        receita = (Button) findViewById(R.id.receita);
         rotina = (Button) findViewById(R.id.rotina);
+        login1 = (Button) findViewById(R.id.login1);
 
 
-        calendario.setOnClickListener(new View.OnClickListener() {
+
+        login1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        comprimido.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ComprimidosActivity.class );
-                startActivity(intent);
-            }
-        });
-
-        receita.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ReicetasActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -59,6 +77,7 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
 
     }

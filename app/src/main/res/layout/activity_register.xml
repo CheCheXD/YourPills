@@ -86,8 +86,16 @@
         android:text="Registrar"
         android:layout_below="@id/repassword1"
         android:layout_marginBottom="50dp"
-
         />
+
+    <Button
+        android:id="@+id/voltar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnsingup1"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="50dp"
+        android:text="Voltar" />
 
 
 </RelativeLayout>

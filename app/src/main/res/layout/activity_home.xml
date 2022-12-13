@@ -31,41 +31,26 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="50dp" />
 
+    <Button
+        android:id="@+id/login1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="50dp" />
+
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="394dp"
         android:layout_height="400dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="125dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="98dp" />
 
-    <Button
-        android:id="@+id/calendario"
-        android:layout_width="150dp"
-        android:layout_height="80dp"
-        android:text="Calendario"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/comprimido"
-        android:layout_width="128dp"
-        android:layout_height="80dp"
-        android:text="Comprimidos"
-        android:textSize="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/receita"
-        android:layout_width="128dp"
-        android:layout_height="80dp"
-        android:text="Receitas"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/rotina"
@@ -76,5 +61,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="525dp"
         tools:ignore="MissingConstraints" />
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constrainedBottom_toTopOf="@+id/BottomNavigationView"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="526dp"
+        tools:ignore="MissingConstraints">
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/BottomNavigationView"
+        android:layout_width="416dp"
+        android:layout_height="61dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="670dp"
+        app:menu="@menu/bottom_nav_menu"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

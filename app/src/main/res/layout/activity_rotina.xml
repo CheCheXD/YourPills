@@ -56,12 +56,11 @@
         android:id="@+id/rotina1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gratity="center"
         android:text="criar rotina"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="542dp" />
+        tools:layout_editor_absoluteY="540dp" />
 
     <Button
         android:id="@+id/voltar"
