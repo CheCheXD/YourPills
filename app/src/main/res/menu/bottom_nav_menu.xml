@@ -14,6 +14,8 @@
         android:icon="@drawable/pill"
         android:title="@string/title_comprimidos"
         app:showAsAction="never"
+        android:actionLayout="@android:layout/activity_list_item
+"
         />
 
     <item
