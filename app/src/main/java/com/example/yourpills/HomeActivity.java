@@ -22,6 +22,7 @@ public class HomeActivity extends AppCompatActivity {
     private Button rotina, login1;
 
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
@@ -35,6 +36,7 @@ public class HomeActivity extends AppCompatActivity {
             case R.id.item2:
                 Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                 startActivity(intent);
+
         }
 
         switch (item.getItemId()){

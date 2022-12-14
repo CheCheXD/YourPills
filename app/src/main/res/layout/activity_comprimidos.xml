@@ -54,9 +54,12 @@
         android:id="@+id/BottomNavigationView"
         android:layout_width="416dp"
         android:layout_height="61dp"
+        app:itemIconTint="@color/cardview_light_background"
+        app:itemTextColor="#FFFFFF"
+        android:background="@color/black"
+        app:menu="@menu/bottom_nav_menu"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="670dp"
-        app:menu="@menu/bottom_nav_menu"/>
+        tools:layout_editor_absoluteY="670dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

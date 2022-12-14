@@ -58,9 +58,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:text="criar rotina"
+        android:textColor="@color/white"
+        app:iconTint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="525dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="525dp" />
 
     <FrameLayout
         android:layout_width="0dp"
@@ -76,10 +78,14 @@
         android:id="@+id/BottomNavigationView"
         android:layout_width="416dp"
         android:layout_height="61dp"
+        app:itemIconTint="@color/cardview_light_background"
+        app:itemTextColor="#FFFFFF"
+        android:background="@color/black"
+        app:menu="@menu/bottom_nav_menu"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="-2dp"
-        tools:layout_editor_absoluteY="670dp"
-        app:menu="@menu/bottom_nav_menu"/>
+        tools:layout_editor_absoluteY="670dp" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
