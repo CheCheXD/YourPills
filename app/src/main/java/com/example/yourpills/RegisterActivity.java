@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class RegisterActivity extends AppCompatActivity {
 
     EditText username, conta1, idade, password, repassword;
-    Button btnsign;
+    Button btnsign, voltar;
     com.example.yourpills.DB DB;
 
 
@@ -29,6 +29,7 @@ public class RegisterActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.password1);
         repassword= (EditText) findViewById(R.id.repassword1);
         btnsign = (Button) findViewById(R.id.btnsingup1);
+        voltar = (Button) findViewById(R.id.voltar);
         DB = new DB(this);
 
         btnsign.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +64,14 @@ public class RegisterActivity extends AppCompatActivity {
                     }
                 }
 
+            }
+        });
+
+        voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
             }
         });
 

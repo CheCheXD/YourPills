@@ -48,7 +48,6 @@
     <FrameLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constrainedBottom_toTopOf="@+id/BottomNavigationView"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="526dp"
         tools:ignore="MissingConstraints">

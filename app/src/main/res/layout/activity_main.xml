@@ -14,12 +14,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="Bem-vindo"
+        android:text="Login"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold" />
 
     <View
+        android:id="@id/view"
         android:layout_width="320dp"
         android:layout_height="2dp"
         android:layout_marginStart="46dp"
@@ -29,22 +30,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="50dp" />
+        tools:layout_editor_absoluteY="50dp"
+        android:layout_marginBottom="10dp"/>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ok"
-        app:srcCompat="@drawable/your_pills" />
+
 
     <EditText
         android:id="@+id/conta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/imageView"
-        android:layout_marginBottom="50dp"
-        android:hint="Email/telemovel"
+        android:layout_below="@id/view"
+        android:layout_marginBottom="25dp"
+        android:hint="Email/telemóvel"
         android:minHeight="48dp" />
 
     <EditText

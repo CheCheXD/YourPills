@@ -15,12 +15,12 @@ import android.widget.Button;
 import android.widget.CalendarView;
 
 public class HomeActivity extends AppCompatActivity {
+    // isto é para criar variaveis
     private DB DB;
     private CalendarView calendarView;
     private String selectedDate;
     private SQLiteDatabase sqLiteDatabase;
     private Button rotina, login1;
-
 
 
     @Override
@@ -57,13 +57,14 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        // este código ira procurar no layout o id das variaveis
 
         calendarView = findViewById(R.id.calendarView);
         rotina = (Button) findViewById(R.id.rotina);
         login1 = (Button) findViewById(R.id.login1);
 
 
-
+        // com este código a variavel vai chamar a página MainActivity
         login1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,6 +73,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        // e com este código a variavel rotina vai chamar a página RotinaActivity
         rotina.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -36,10 +36,10 @@
         android:id="@+id/username1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/ok"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="20dp"
-        android:hint="Nome completo"
-        android:layout_marginTop="50dp"
-        />
+        android:hint="Nome completo" />
 
     <EditText
         android:id="@+id/conta1"
