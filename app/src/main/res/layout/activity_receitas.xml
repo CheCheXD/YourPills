@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReicetasActivity">
+    tools:context=".ReceitasActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -29,33 +29,48 @@
         android:background="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="50dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/rotina"
         android:layout_width="62dp"
         android:layout_height="48dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="150dp"
         android:text="+"
         android:textColor="@color/black"
         android:textSize="20dp"
         app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="525dp" />
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/voltar1"
+        android:layout_width="119dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="84dp"
+        android:text="voltar"
+        android:textColor="@color/black"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <FrameLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="526dp"
-        tools:ignore="MissingConstraints">
+        tools:layout_editor_absoluteY="526dp">
 
     </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/BottomNavigationView"
+        android:id="@+id/BottomMenu1"
         android:layout_width="416dp"
         android:layout_height="61dp"
         android:background="#FF9800"

@@ -1,6 +1,6 @@
 package com.example.yourpills;
 
-import static com.example.yourpills.R.id.BottomMenu2;
+import static com.example.yourpills.R.id.BottomMenu1;
 import static com.example.yourpills.R.id.item4;
 
 import androidx.annotation.NonNull;
@@ -19,10 +19,10 @@ import android.widget.CalendarView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class ComprimidosActivity extends AppCompatActivity {
+public class ReceitasActivity extends AppCompatActivity {
 
     private Button volta1;
-    private BottomNavigationView BottomMenu2 = findViewById(R.id.BottomMenu2);
+    private BottomNavigationView BottomMenu1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +31,12 @@ public class ComprimidosActivity extends AppCompatActivity {
 
 
         volta1 = (Button) findViewById(R.id.voltar1);
-        BottomMenu2.setSelectedItemId(R.id.item2);
-        BottomMenu2.setSelectedItemId(R.id.item3);
-        BottomMenu2.setSelectedItemId(item4);
+        BottomMenu1 = findViewById(R.id.BottomMenu1);
+        BottomMenu1.setSelectedItemId(R.id.item2);
+        BottomMenu1.setSelectedItemId(R.id.item3);
+        BottomMenu1.setSelectedItemId(item4);
 
-        BottomMenu2.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
+        BottomMenu1.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
             @Override
             public void onNavigationItemReselected(@NonNull MenuItem item) {
 
@@ -59,6 +60,8 @@ public class ComprimidosActivity extends AppCompatActivity {
 
             }
         });
+
+
 
         volta1.setOnClickListener(new View.OnClickListener() {
             @Override
