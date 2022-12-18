@@ -32,12 +32,21 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:ignore="MissingConstraints" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/view"
+        android:layout_width="408dp"
+        android:layout_height="462dp"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="64dp"
+        tools:ignore="MissingConstraints" />
+
+
     <Button
-        android:id="@+id/rotina"
+        android:id="@+id/asdasd"
         android:layout_width="62dp"
         android:layout_height="48dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="150dp"
+        android:layout_marginEnd="296dp"
+        android:layout_marginBottom="152dp"
         android:text="+"
         android:textColor="@color/black"
         android:textSize="20dp"
@@ -46,10 +55,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_baseline_add_24"
+        tools:layout_editor_absoluteX="339dp"
+        tools:layout_editor_absoluteY="531dp"
+        tools:ignore="MissingConstraints" />
+
     <Button
         android:id="@+id/voltar1"
         android:layout_width="119dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="84dp"
         android:text="voltar"
@@ -73,7 +92,6 @@
         android:id="@+id/BottomMenu2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/rotina"
         android:background="#FF9800"
         app:itemIconTint="@color/black"
         app:itemTextColor="@color/black"

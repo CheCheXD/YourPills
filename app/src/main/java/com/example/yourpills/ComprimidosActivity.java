@@ -5,6 +5,7 @@ import static com.example.yourpills.R.id.item4;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -18,22 +19,34 @@ import android.widget.Button;
 import android.widget.CalendarView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class ComprimidosActivity extends AppCompatActivity {
 
+    RecyclerView view;
+    FloatingActionButton add;
     private Button volta1;
     private BottomNavigationView BottomMenu2 = findViewById(R.id.BottomMenu2);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_receitas);
+        setContentView(R.layout.activity_comprimidos);
 
-
+        view = findViewById(R.id.view);
+        add = findViewById(R.id.add);
         volta1 = (Button) findViewById(R.id.voltar1);
         BottomMenu2.setSelectedItemId(R.id.item2);
         BottomMenu2.setSelectedItemId(R.id.item3);
         BottomMenu2.setSelectedItemId(item4);
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), AdicionarCompActivity.class);
+                startActivity(intent);
+            }
+        });
 
         BottomMenu2.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
             @Override

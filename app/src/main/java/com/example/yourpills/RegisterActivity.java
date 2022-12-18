@@ -12,9 +12,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    EditText username, conta1, idade, password, repassword;
-    Button btnsign, voltar;
-    com.example.yourpills.DB DB;
+    private EditText username, conta1, idade, password, repassword;
+    private Button btnsign, voltar;
+    private DB DB;
 
 
     @SuppressLint("MissingInflatedId")
@@ -45,7 +45,7 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this, "Por favor preencha todos os requisitos por favor", Toast.LENGTH_SHORT).show();
                 else{
                     if(pass.equals(repass)){
-                        boolean checkuser = DB.checkuser(user);
+                        boolean checkuser = DB.checkusername(user);
                         if(checkuser==false){
                             boolean insert = DB.insertDATA(user, email, age, pass);
                             if(insert==true){

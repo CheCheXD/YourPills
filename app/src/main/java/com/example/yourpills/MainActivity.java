@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.password);
         singin = (Button) findViewById(R.id.btnlogin);
         singup = (Button) findViewById(R.id.btnsingup);
-
+        DB = new DB(this);
 
 
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 if(email.equals("")||pass.equals(""))
                     Toast.makeText(MainActivity.this, "Por favor preencha os campos", Toast.LENGTH_SHORT).show();
                 else{
-                    Boolean checkuserpass = DB.checkuserpass(email, pass);
+                    Boolean checkuserpass = DB.checkusernamepassword(email, pass);
                     if (checkuserpass==true) {
                         Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
