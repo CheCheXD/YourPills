@@ -7,11 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
-
-import androidx.annotation.Nullable;
-
-import java.sql.Blob;
-
 public class DB extends SQLiteOpenHelper {
 
     private Context context;
@@ -19,7 +14,7 @@ public class DB extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
 
     private static final String TABLE_NAME = "comprimido";
-    private static final String COLUMN_ID = "_id";
+    private static final String COLUMN_ID = "comp_id";
     private static final String COLUMN_NAME = "nome_comprimido";
     private static final String COLUMN_MIL = "miligramas_comprimido";
     private static final String COLUMN_MED = "medicamentos_comprimido";
@@ -54,7 +49,7 @@ public class DB extends SQLiteOpenHelper {
         onCreate(MyDB);
     }
 
-    void addComp(String Name, int MIl, int MED, int EMB, String data){
+    void addComp(String Name, String MIl, String MED, String EMB, String data, Integer integer){
         SQLiteDatabase MyDB = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
 
@@ -69,7 +64,6 @@ public class DB extends SQLiteOpenHelper {
         }else {
             Toast.makeText(context, "Adicionado com Sucesso", Toast.LENGTH_SHORT).show();
         }
-
 
     }
     public Boolean insertDATA(String username, String email, String age, String password){
@@ -106,4 +100,14 @@ public class DB extends SQLiteOpenHelper {
             return false;
     }
 
+    Cursor readAllData(){
+        String query = "SELECT * FROM " + TABLE_NAME;
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = null;
+        if(db != null){
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
 }

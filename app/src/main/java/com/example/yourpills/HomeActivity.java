@@ -26,8 +26,7 @@ public class HomeActivity extends AppCompatActivity {
     private Button rotina, login1;
     private BottomNavigationView BottomMenu;
 
-    public HomeActivity() {
-    }
+
 
 
     @Override

@@ -40,7 +40,6 @@ public class AdicionarCompActivity extends AppCompatActivity {
         data_comp = findViewById(R.id.date_comp);
         inserir = findViewById(R.id.inserir);
         voltar= findViewById(R.id.voltar2);
-
         inserir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,8 +49,7 @@ public class AdicionarCompActivity extends AppCompatActivity {
                         med_comp.getText().toString().trim(),
                         emb_comp.getText().toString().trim(),
                         data_comp.getText().toString().trim(),
-                        Integer.valueOf(name_comp.getText().toString().trim());
-            }
+                        Integer.valueOf(name_comp.getText().toString().trim()));}
         });
 
     }

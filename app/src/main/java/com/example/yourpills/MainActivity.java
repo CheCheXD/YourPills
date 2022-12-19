@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private EditText conta, password;
-    private Button singin, singup;
+    private Button singin, singup, voltar;
     private DB DB;
 
     @Override
