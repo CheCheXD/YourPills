@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.password);
         singin = (Button) findViewById(R.id.btnlogin);
         singup = (Button) findViewById(R.id.btnsingup);
+        voltar = (Button) findViewById(R.id.voltar4);
         DB = new DB(this);
 
 
@@ -54,6 +55,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                 startActivity(intent);
             }
         });
