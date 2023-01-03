@@ -1,5 +1,7 @@
 package com.example.yourpills;
 
+import static com.example.yourpills.R.id.item2;
+import static com.example.yourpills.R.id.item3;
 import static com.example.yourpills.R.id.item4;
 
 import androidx.annotation.NonNull;
@@ -46,8 +48,8 @@ public class HomeActivity extends AppCompatActivity {
         rotina = (Button) findViewById(R.id.rotina);
         login1 = (Button) findViewById(R.id.login1);
         BottomMenu = findViewById(R.id.BottomMenu);
-        BottomMenu.setSelectedItemId(R.id.item2);
-        BottomMenu.setSelectedItemId(R.id.item3);
+        BottomMenu.setSelectedItemId(item2);
+        BottomMenu.setSelectedItemId(item3);
         BottomMenu.setSelectedItemId(item4);
 
         BottomMenu.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
@@ -55,19 +57,19 @@ public class HomeActivity extends AppCompatActivity {
             public void onNavigationItemReselected(@NonNull MenuItem item) {
 
                 switch (item.getItemId()){
-                    case R.id.item2:
+                    case item2:
                         startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                         overridePendingTransition(0,0);
                 }
 
                 switch (item.getItemId()){
-                    case R.id.item3:
+                    case item3:
                         startActivity(new Intent(getApplicationContext(), ComprimidosActivity.class));
                         overridePendingTransition(0,0);
                 }
 
                 switch (item.getItemId()){
-                    case R.id.item4:
+                    case item4:
                         startActivity(new Intent(getApplicationContext(), ReceitasActivity.class));
                         overridePendingTransition(0,0);
                 }

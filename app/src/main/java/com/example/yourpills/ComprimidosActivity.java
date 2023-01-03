@@ -2,6 +2,8 @@ package com.example.yourpills;
 
 import static com.example.yourpills.R.id.BottomMenu2;
 import static com.example.yourpills.R.id.comp;
+import static com.example.yourpills.R.id.item2;
+import static com.example.yourpills.R.id.item3;
 import static com.example.yourpills.R.id.item4;
 
 import androidx.annotation.NonNull;
@@ -79,13 +81,13 @@ public class ComprimidosActivity extends AppCompatActivity {
             public void onNavigationItemReselected(@NonNull MenuItem item) {
 
                 switch (item.getItemId()){
-                    case R.id.item2:
+                    case item2:
                         startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                         overridePendingTransition(0,0);
                 }
 
                 switch (item.getItemId()){
-                    case R.id.item3:
+                    case item3:
                         startActivity(new Intent(getApplicationContext(), ComprimidosActivity.class));
                         overridePendingTransition(0,0);
                 }
