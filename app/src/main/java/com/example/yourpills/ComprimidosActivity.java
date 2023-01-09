@@ -1,14 +1,14 @@
 package com.example.yourpills;
 
-import static com.example.yourpills.R.id.BottomMenu2;
-import static com.example.yourpills.R.id.comp;
 import static com.example.yourpills.R.id.item2;
 import static com.example.yourpills.R.id.item3;
 import static com.example.yourpills.R.id.item4;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -21,6 +21,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -37,6 +38,7 @@ public class ComprimidosActivity extends AppCompatActivity {
 
     DB myDB;
     ArrayList<String> comp_id, name_comp, mil_comp, med_comp, emb_comp, date_comp;
+    CustomAdapter customAdapter;
 
     void storeDataInArrays(){
         Cursor cursor = myDB.readAllData();
@@ -45,6 +47,7 @@ public class ComprimidosActivity extends AppCompatActivity {
         }
     }
 
+    LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +70,13 @@ public class ComprimidosActivity extends AppCompatActivity {
         date_comp = new ArrayList<>();
 
         storeDataInArrays();
+
+        customAdapter = new CustomAdapter(ComprimidosActivity.this,this, comp_id, name_comp, mil_comp, med_comp, emb_comp,
+                date_comp);
+        view.setAdapter(customAdapter);
+        view.setLayoutManager(new LinearLayoutManager(ComprimidosActivity.this));
+
+
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override

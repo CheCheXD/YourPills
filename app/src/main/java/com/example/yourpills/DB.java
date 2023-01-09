@@ -7,6 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+
 public class DB extends SQLiteOpenHelper {
 
     private Context context;
@@ -22,8 +24,9 @@ public class DB extends SQLiteOpenHelper {
     private static final String COLUMN_DATA = "data_comprimido";
 
 
-    public DB(Context context) {
+    DB(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        this.context = context;
     }
 
     @Override
@@ -109,5 +112,23 @@ public class DB extends SQLiteOpenHelper {
             cursor = db.rawQuery(query, null);
         }
         return cursor;
+    }
+
+    void updateData(String row_id, String nome, String miligramas, String medicamentos, String embalagens, String data){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(COLUMN_NAME, nome);
+        cv.put(COLUMN_MIL, miligramas);
+        cv.put(COLUMN_MED, medicamentos);
+        cv.put(COLUMN_EMB, embalagens);
+        cv.put(COLUMN_DATA, data);
+
+        long result = db.update(COLUMN_NAME, cv, "_id=?", new String[]{row_id});
+        if (result == -1){
+            Toast.makeText(context, "Falhou", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(context, "Atualizou com Sucesso", Toast.LENGTH_SHORT).show();
+        }
+
     }
 }
