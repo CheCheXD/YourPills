@@ -127,8 +127,24 @@ public class DB extends SQLiteOpenHelper {
         if (result == -1){
             Toast.makeText(context, "Falhou", Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(context, "Atualizou com Sucesso", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Atualizado com Sucesso", Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+
+    void deleteOneRow(String row_id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        long result = db.delete(TABLE_NAME, "_id=?", new String[]{row_id});
+        if(result == -1){
+            Toast.makeText(context, "Ocorreu um Erro", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(context, "Apagado com Sucesso", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    void deleteAllData(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("DELETE FROM " + TABLE_NAME);
     }
 }
